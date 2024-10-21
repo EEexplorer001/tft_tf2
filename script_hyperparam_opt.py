@@ -58,7 +58,9 @@ def main(expt_name, use_gpu, restart_opt, model_folder, hyperparam_iterations,
         "Data formatters should inherit from" +
         "AbstractDataFormatter! Type={}".format(type(data_formatter)))
 
-  default_keras_session = tf.compat.v1.keras.backend.get_session()
+  # default_keras_session = tf.compat.v1.keras.backend.get_session()
+  default_keras_session = tf.compat.v1.keras.backend.clear_session()
+
 
   if use_gpu:
     tf_config = utils.get_default_tensorflow_config(tf_device="gpu", gpu_id=0)
