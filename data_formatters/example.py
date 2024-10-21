@@ -43,12 +43,13 @@ class ExampleFormatter(GenericDataFormatter):
   """
 
   _column_definition = [
-      ('hours_of_the_day', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
-      ('Day_of_the_week', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
+      ('id', DataTypes.REAL_VALUED, InputTypes.ID),
+      ('hours_from_start', DataTypes.REAL_VALUED, InputTypes.TIME),
       ('Electric_demand', DataTypes.REAL_VALUED, InputTypes.TARGET),
-      ('day_of_the_month', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
-      ('Season', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT), 
-      ('minutes_of_the_hour', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT), 
+      ('hour_of_day', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
+      ('day_of_week', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
+      ('hours_from_start', DataTypes.REAL_VALUED, InputTypes.KNOWN_INPUT),
+      ('categorical_id', DataTypes.CATEGORICAL, InputTypes.STATIC_INPUT),
   ]
 
   # Season	Day_of_the_week	Electric_demand	day_of_the_month	hours_of_the_day	minutes_of_the_hour	days_from_start
